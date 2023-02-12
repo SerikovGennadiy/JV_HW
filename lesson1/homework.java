@@ -1,8 +1,9 @@
 package lesson1;
 
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
+import java.util.Scanner;
+// import java.util.stream.Collectors;
+// import java.util.stream.IntStream;
 import java.util.Arrays;
 import java.util.ArrayList;
 
@@ -14,6 +15,8 @@ public class homework {
        for (Integer prime : GetPrimesTo(1000)) {
             System.out.printf("%d ", prime);
        }
+
+       Calculator();
     }
 
     public static int GetTriangleNumber(int bound) 
@@ -58,5 +61,51 @@ public class homework {
             }
         }
         return primes;
+    }
+
+    public static void Calculator()
+    {
+        System.out.println("====== calculator ======");
+        System.out.print("choose operation (+ - * /): ");
+
+        Scanner sn = new Scanner(System.in);
+        var operation = sn.next();
+        try
+        {
+            System.out.print("insert first operand: ");
+            var firstOperand = sn.nextDouble();
+
+            System.out.print("insert second operand: ");
+            var secondOperarnd = sn.nextDouble();
+
+            double result = 0f;
+            if(operation.equals("+"))
+            {
+                result = firstOperand + secondOperarnd;
+            }
+            else if(operation.equals("+"))
+            {
+                result = firstOperand - secondOperarnd;
+            }
+            else if(operation.equals("+"))
+            {
+                result = firstOperand * secondOperarnd;
+            }
+            else if(operation.equals("+"))
+            {
+                result = firstOperand / secondOperarnd;
+            }
+            else
+            {
+                throw new Exception("operation invalid. try again");
+            }
+
+            System.out.printf("%.2f %s %.2f = %.2f", firstOperand, operation, secondOperarnd, result);
+        }
+        catch(Exception ex)
+        {
+            System.out.print(ex.getMessage());
+        }
+         
     }
 }
