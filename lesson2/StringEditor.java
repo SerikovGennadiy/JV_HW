@@ -20,14 +20,15 @@ public class StringEditor {
 
     public StringEditor dotInEnd()
     {
-        _str = _str + ".";
+        if(_str.matches(".*[а-я]+$"))
+            _str = _str + ".";
         return this;
     }
 
     public StringEditor editCapitals()
     {
         _str = Pattern
-                .compile("(\\s+)([A-ZА-Я])")
+                .compile("(\\s+)([А-Я])")
                 .matcher(_str)
                 .replaceAll(gr -> ".\s" + gr.group(2));
         return this;
