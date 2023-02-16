@@ -8,6 +8,7 @@ public class StringEditor {
     {
         if(str == null || str.trim().isEmpty())
             throw new Exception("StringEdidor ctor arg (str) is null or empty");
+
         _str = str;
     }
     
