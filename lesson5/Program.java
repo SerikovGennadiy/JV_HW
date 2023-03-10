@@ -39,8 +39,7 @@ public class Program {
         var temp = new ArrayDeque<Integer>();
 
         int i = 0, j = 0;
-        while ( i < mask.length )
-        {
+        while ( i < mask.length ) {
             while (mask[i] == range[j]) {
                 temp.addLast(range[j]);
                 i++;
@@ -64,8 +63,7 @@ public class Program {
         return results;
     }
 
-    static Optional<ArrayDeque<Integer>> FindMaxArray(ArrayList<ArrayDeque<Integer>> arrays)
-    {
+    static Optional<ArrayDeque<Integer>> FindMaxArray(ArrayList<ArrayDeque<Integer>> arrays) {
         return arrays
                   .stream()
                   .max(new DequeComparator());      
