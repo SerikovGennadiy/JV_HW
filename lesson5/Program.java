@@ -11,7 +11,10 @@ public class Program {
         ShowResult(MaxSubArray(new int[] { 0, 0, 0, 0, 0 }, new int[] { 0, 0, 0, 0, 0}));        
         ShowResult(MaxSubArray(new int[] { 1, 2, 3, 4, 5 }, new int[] { 1, 0, 0, 0, 0}));        
         ShowResult(MaxSubArray(new int[] { 1, 0, 0, 0, 0 }, new int[] { 0, 0, 0, 0, 1}));        
-        ShowResult(MaxSubArray(new int[] { 8 }, new int[] { 1, 2, 9}));        
+        ShowResult(MaxSubArray(new int[] { 8 }, new int[] { 1, 2, 9}));       
+        ShowResult(MaxSubArray(new int[] { 1, 2, 3, 3, 4, 0, 6, 7, 8, 0, 1 }, 
+                               new int[] { 1, 2, 1, 3, 4, 0, 6, 7, 8, 9, 10}));        
+
     }
 
     static void ShowResult(Optional<ArrayDeque<Integer>> result) {
